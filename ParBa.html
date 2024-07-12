@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParBa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<style>/* Reset some default styles */
+   body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #EFF6F9;
+}
+
+header {
+    background-color: #084C61;
+    padding: 15px 0;
+    margin-right: 450px ;
+    margin-left: 400px ;
+    text-align: Line;
+
+
+}
+
+nav {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #07617D;
+}
+
+.auth-links a {
+    color: #084C61;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+    color: #07617D;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #EFF6F9;
+    border-radius: 10px;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero h2 {
+    font-size: 24px;
+    color: #4A4A4A;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #084C61;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #4A4A4A;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.start-button, .network-button {
+    background-color: #084C61;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.network-button {
+    background-color: white;
+    color: #084C61;
+    border: 2px solid #084C61;
+}
+
+.start-button:hover, .network-button:hover {
+    background-color: #07617D;
+    color: white;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+ 
+.about {
+    background-color: #0067a3;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+ 
+}
+
+.partners {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #EFF6F9;
+}
+
+.partners h2 {
+    font-size: 36px;
+    color: #084C61;
+    margin-bottom: 40px;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #B3E5FC;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel button {
+    background-color: #084C61;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+.carousel button:hover {
+    background-color: #07617D;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-slide {
+    min-width: 300px;
+    flex: 1 0 100%;
+    scroll-snap-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+    
+    .testimonials {
+        padding: 40px 0;
+        text-align: center;
+    }
+    
+    .testimonials h2 {
+        margin-bottom: 20px;
+    }
+    
+    .testimonials-list {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .testimonial {
+        background-color: #f4f4f4;
+        padding: 20px;
+        border-radius: 10px;
+        width: 30%;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    .testimonial img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .testimonial h3 {
+        margin-top: 10px;
+    }
+    
+    .contact {
+        background-color: #e8f4f8;
+        padding: 40px 0;
+        text-align: center;
+    }
+    
+    .contact h2 {
+        margin-bottom: 20px;
+    }
+    
+    .contact form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact form label {
+        margin-top: 10px;
+    }
+    
+    .contact form input, .contact form textarea {
+        width: 50%;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    .contact form button {
+        background-color: #0067a3;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+    .footer-section {
+        width: 45%;
+        display: inline-block;
+        text-align: left;
+        vertical-align: top;
+        margin-top: 10px;
+    }
+    
+    .footer-social a {
+        color: #fff;
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+    
+    .footer-social a:hover {
+        color: #0067a3;
+    }
+    </style>
+<body>
+    <header>
+        <nav class="navbar">
+          <div class="logo">
+            <a href="#home">ParBa</a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#a-propos">A propos</a></li>
+            <li><a href="#partenaire">Partenaire</a></li>
+            <li><a href="#temoignage">Témoignage</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="auth-links">
+            <a href="#connexion" class="connexion">Connexion</a>
+            <a href="#inscription" class="inscription">Inscription</a>
+          </div>
+        </nav>
+      </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Votre assistante !</h2>
+            <h1>ParBa</h1>
+            <p>La gestion des remplacements est devenue un enjeu structurant pour les établissements sanitaires et médico-sociaux.</p>
+            <div class="hero-buttons">
+                <button class="start-button">Commencer</button>
+                <button class="network-button">Mon réseau &#x25BC;</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="c:\Users\jobba\OneDrive\Documents\site parba\Tech Life Remote Life.png" alt="Illustration">
+        </div>
+    </section>
+    <section class="about">
+        <div class="container">
+            <h1>ParBa</h1>
+            <p>La gestion des remplacements est devenue un enjeu structurant pour les établissements sanitaires et médico-sociaux.</p> <br>
+                <p> Les outils actuels sont chronophages et peu efficients. ParBa propose une solution digitale simple et efficace, adaptée aux besoins de toutes les structures.</p> 
+            </p>
+            <p>ParBa a été pensé pour révolutionner la gestion des ressources humaines dans la santé. Cette solution de pilotage des absences et des remplacements de personnel, 100% en ligne permet aux établissements sanitaires et médico-sociaux de gérer leur personnel (agents, salariés et vacataires).</p>
+        </div>
+    </section>
+        <section class="partners">
+            <title>Nos Partenaires</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="partners">
+        <h2>Nos partenaires</h2>
+        <div class="carousel">
+            <button class="prev">&#9664;</button>
+            <div class="carousel-track">
+                <div class="carousel-slide"><img src="c:\Users\jobba\OneDrive\Documents\site parba\BOOSTER LOGO.png" alt="Partenaire 1"></div>
+                <div class="carousel-slide"><img src="c:\Users\jobba\OneDrive\Documents\site parba\BOOSTER LOGO-2.png" alt="Partenaire 2"></div>
+                <div class="carousel-slide"><img src="partner3.png" alt="Partenaire 3"></div>
+            </div>
+            <button class="next">&#9654;</button>
+        </div>
+    </section>
+        </section>
+        <section class="testimonials">
+            <div class="container">
+                <h2>Ils nous font confiance !</h2>
+                <div class="testimonials-list">
+                    <div class="testimonial">
+                        <img src="c:\Users\jobba\OneDrive\Documents\site parba\Ellipse 1.png" alt="Adams Smith">
+                        <h3>Adams Smith</h3>
+                        <p>General Manager</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id in posuere id leo, auctor aliquam feugiat fermentum.</p>
+                    </div>
+                    <div class="testimonial">
+                        <img src="c:\Users\jobba\OneDrive\Documents\site parba\Ellipse 2.png" alt="Juliette Faye">
+                        <h3>Juliette Faye</h3>
+                        <p>Self Care</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id in posuere id leo, auctor aliquam feugiat fermentum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <form action="#">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name">
+                    
+                    <label for="organization">Structure</label>
+                    <input type="text" id="organization" name="organization">
+                    
+                    <label for="email">Adresse mail</label>
+                    <input type="email" id="email" name="email">
+                    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+           
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <div class="footer-content">
+                <div class="column">
+                <h3>ParBa</h3>
+                <p>Lorem ipsum dolor sit amet, 
+                    consectetur adipiscing elit. Nunc 
+                    auctor est et ultricies.Lorem ipsum 
+                    dolor sit amet, consectetur 
+                    adipiscing elit. Nunc auctor est et 
+                    ultricies. </p>
+            </div>
+            </div>
+            </div>
+            <div class="footer-section">
+            <div class="column">
+                <h3>A Propos</h3>
+                <p>  Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit. Euismod dignissim tortor 
+                    nam tincidunt donec. Vulputate tortor 
+                    nulla aliquam sed scelerisque. Nunc, diam 
+                    vestibulum purus eu. Eu placerat vitae at.</p>
+            </div>
+            </div>
+        </div>
+        <div class="footer-social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        <p class="copyright">COPYRIGHT 2021 | DEFAR Sci - Tout droit réservés</p>
+    </div>
+            
+        </div>
+    </footer>
+</body>
+</html>
